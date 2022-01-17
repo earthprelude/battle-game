@@ -3,9 +3,9 @@ from player import *
 
 screen = turtle.Screen()
 screen.setup(400, 400)
-#screen.bgpic("images/sun_image.jpg")
 screen.bgcolor("gray")
 
+# user turtle
 u = turtle.Turtle() 
 u.ht() 
 u.left(90)
@@ -13,6 +13,7 @@ u.penup()
 u.goto(-100, -80)
 u.color("white")
 
+# bot turtle 
 b = turtle.Turtle()
 b.left(90)
 b.ht() 
