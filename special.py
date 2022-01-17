@@ -34,19 +34,19 @@ class Voldemort(Player):
 
 # Thanos class
 class Thanos(Player): 
-  def __init__(self):
-    Player.__init__(self, "Thanos")
-    self.image = "images/thanos.gif"
-    self.moves["smash"] = self.attack
-    self.moves["Thanos Snap"] = self.finger_snap
-    self.moves.pop("attack")
-    self.moves.pop("heal")
+    def __init__(self):
+        Player.__init__(self, "Thanos")
+        self.image = "images/thanos.gif"
+        self.moves["smash"] = self.attack
+        self.moves["Thanos Snap"] = self.finger_snap
+        self.moves.pop("attack")
+        self.moves.pop("heal")
  
-  def finger_snap(self, enemy): 
-    damage = round(enemy.health / 2) 
-    self.attack(enemy, damage)
-    n = random.uniform(0, self.health/2)
-    self.attack(self, round(n))
+    def finger_snap(self, enemy): 
+        damage = round(enemy.health / 2) 
+        self.attack(enemy, damage)
+        n = random.uniform(0, self.health/2)
+        self.attack(self, round(n))
  
 # Jedi class     
 class Jedi(Player): 
