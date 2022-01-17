@@ -1,6 +1,7 @@
 import turtle 
 from player import * 
 
+# set up window
 screen = turtle.Screen()
 screen.setup(400, 400)
 screen.bgcolor("gray")
