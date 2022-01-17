@@ -1,7 +1,12 @@
 import random, time
 from draw import *
 
-# added line to draw update with graphics
+"""
+Displays the current status of two Player objects. 
+----------
+user : Player object 
+bot : Player object
+"""
 def status(user, bot): 
   print ("\n" + "-" * 40)
   user.status()
@@ -9,6 +14,12 @@ def status(user, bot):
   print ("-" * 40)
   draw_update(user, bot)
 
+"""
+Allows the user to select a move, and does that move against the bot Player.
+----------
+user : Player object 
+bot : Player object
+"""  
 def user_move(user, bot): 
   print ("Choose a move:")
   for m in user.moves: 
@@ -22,10 +33,15 @@ def user_move(user, bot):
   else: 
     print ("Invalid")
     user_move(user, bot)
-  
   time.sleep(1) 
   status(user, bot)
 
+"""
+Selects a random move for the bot Player against the user Player. 
+----------
+user : Player object 
+bot : Player object
+""" 
 def bot_move(user, bot): 
   print ("Computer's turn...")
   time.sleep(1)
