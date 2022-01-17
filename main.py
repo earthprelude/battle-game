@@ -4,6 +4,7 @@ from helper import *
 from draw import *
 from special import *
 
+# gets valid player selection from user  
 def get_player(): 
   options = {"Pikachu":Pikachu(), "Spiderman":Spiderman(), "Jedi":Jedi()}
   print("Who do you want to play as?/n")
@@ -14,10 +15,10 @@ def get_player():
     choice = input(">")
     if choice in options: 
       return options[choice]
-    else:
+    else: 
       print ("Invalid")
 
-
+# game logic for the battle
 def battle(user, bot, level):
   if level == 2: 
     bot = Thanos()
@@ -34,8 +35,7 @@ def battle(user, bot, level):
   if user.health < 0 and bot.health < 0: 
     print ("Tie!")
   elif user.health < 0: 
-    print ("You lose...")
-    return 
+    print ("You lose...") 
   else: 
     print ("You win!")
     if level == 2: 
@@ -46,6 +46,7 @@ def battle(user, bot, level):
     level += 1
     battle(user, bot, level) 
 
+# setup 
 print("Get ready for battle.../n")
 user = get_player()
 bot = Voldemort()
