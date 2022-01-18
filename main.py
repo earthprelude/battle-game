@@ -16,11 +16,7 @@ def get_player():
       print ("Invalid")
 
 # game logic for the battle
-def battle(user, bot, level):
-  if level == 2: 
-    bot = Thanos()
-    show_bot(bot)
-    
+def battle(user, bot, level):  
   print ("Your opponent will be...", bot.name)
   status(user, bot)  
   while user.health > 0 and bot.health > 0:
@@ -37,6 +33,9 @@ def battle(user, bot, level):
     print ("You win!")
     if level == 2: 
       return 
+    else:  
+      bot = Thanos()
+      show_bot(bot)
     time.sleep(1)
     print ("\nLevel up...\n")
     time.sleep(1)
