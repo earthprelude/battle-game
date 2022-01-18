@@ -7,10 +7,7 @@ from special import *
 # gets valid player selection from user  
 def get_player(): 
   options = {"Pikachu":Pikachu(), "Spiderman":Spiderman(), "Jedi":Jedi()}
-  print("Who do you want to play as?/n")
-  for x in options: 
-    print(x)
-  print("")
+  print(" / ".join(options.keys()))
   while True:
     choice = input(">")
     if choice in options: 
@@ -41,13 +38,13 @@ def battle(user, bot, level):
     if level == 2: 
       return 
     time.sleep(1)
-    print ("/nLevel up.../n")
+    print ("\nLevel up...\n")
     time.sleep(1)
     level += 1
     battle(user, bot, level) 
 
 # setup 
-print("Get ready for battle.../n")
+print("Get ready for battle...\nWho do you choose to play as?")
 user = get_player()
 bot = Voldemort()
 show_user(user)
