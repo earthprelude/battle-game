@@ -15,7 +15,7 @@ def status(user, bot):
   draw_update(user, bot)
 
 """
-Allows the user to select a move, and does that move against the bot Player.
+Allows the user to select a move from available options, and executes move against the second Player object.
 ----------
 user : Player object 
 bot : Player object
@@ -37,7 +37,7 @@ def user_move(user, bot):
   status(user, bot)
 
 """
-Selects a random move for the bot Player against the user Player. 
+Selects a random move for the bot Player to use against the user Player. 
 ----------
 user : Player object 
 bot : Player object
