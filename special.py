@@ -9,7 +9,6 @@ class Spiderman(Player):
         Player.__init__(self, "Spiderman") 
         self.moves["web shooter"] = self.web_shooter
         self.image = "images/spideycartoon.gif"
-        self.special = 2
     
     def web_shooter(self, enemy):
         self.attack(enemy, 40)
